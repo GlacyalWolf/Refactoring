@@ -1,8 +1,10 @@
+import java.util.Date;
+
 public class Lloguer {
-    private String data;
+    private Date data;
     private int dies;
 
-    public Lloguer(String data,int dies){
+    public Lloguer(Date data,int dies){
         this.data=data;
         this.dies=dies;
     }
@@ -11,11 +13,11 @@ public class Lloguer {
         return dies;
     }
 
-    public String getData() {
+    public Date getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(Date data) {
         this.data = data;
     }
 
