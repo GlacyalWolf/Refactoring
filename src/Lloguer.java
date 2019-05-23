@@ -3,10 +3,12 @@ import java.util.Date;
 public class Lloguer {
     private Date data;
     private int dies;
+    public Vehicle vehicle;
 
-    public Lloguer(Date data,int dies){
+    public Lloguer(Date data,int dies,Vehicle vehicle){
         this.data=data;
         this.dies=dies;
+        this.vehicle=vehicle;
     }
 
     public int getDies() {
