@@ -2,11 +2,10 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.ListIterator;
 
 public class GestorLloguersLite {
-    public static String informeLite(Client client){
-        return
-    }
+
     public static void main (String[] args) throws ParseException {
         // demostració de construcció d'un vehicle de categoria BASIC
         Vehicle vehicleBasic = new Vehicle("Tata", "Vista", Vehicle.BASIC);
@@ -18,6 +17,22 @@ public class GestorLloguersLite {
 
         // demostració de formatat d'una data
         System.out.println(dateFormat.format(lloguerBasic.getData()));
-    }
 
+
+    }
+    public static void informeLite(Client client){
+        System.out.println("Client: "+client.getNom());
+        System.out.println("        "+client.getNif());
+        System.out.println("        "+client.getTelefon());
+        System.out.println("Lloguer: "+client.lloguers.size());
+        ListIterator<Lloguer> it = client.lloguers.listIterator();
+        int count=1;
+        Lloguer l;
+        while (it.hasNext()){
+            l=it.next();
+            System.out.println("    "+count+". "+"vehicle: "+l.vehicle.getMarca()+" "+l.vehicle.getModel());
+            System.out.println("        "+l.getData());
+            System.out.println("        "+l.getDies());
+        }
+    }
 }
