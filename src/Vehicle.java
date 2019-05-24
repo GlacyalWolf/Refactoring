@@ -2,9 +2,9 @@ public class Vehicle {
     private String model;
     private String marca;
     private int categoria;
-    static public int BASIC=0;
-    static public int GENERAL=1;
-    static public int LUXE=2;
+    static public final int BASIC=0;
+    static public final int GENERAL=1;
+    static public final int LUXE=2;
 
     public Vehicle(){}
 
@@ -33,5 +33,11 @@ public class Vehicle {
         this.model = model;
     }
 
+    public void setCategoria(int categoria) {
+        this.categoria = categoria;
+    }
 
+    public int getCategoria() {
+        return categoria;
+    }
 }

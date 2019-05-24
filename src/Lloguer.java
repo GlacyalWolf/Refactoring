@@ -27,5 +27,11 @@ public class Lloguer {
         this.dies = dies;
     }
 
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
 
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
 }

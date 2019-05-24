@@ -7,6 +7,7 @@ import java.util.ListIterator;
 public class GestorLloguersLite {
 
     public static void main (String[] args) throws ParseException {
+
         // demostració de construcció d'un vehicle de categoria BASIC
         Vehicle vehicleBasic = new Vehicle("Tata", "Vista", Vehicle.BASIC);
 
@@ -17,6 +18,9 @@ public class GestorLloguersLite {
 
         // demostració de formatat d'una data
         System.out.println(dateFormat.format(lloguerBasic.getData()));
+
+
+
 
 
     }
