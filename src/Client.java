@@ -36,7 +36,7 @@ public class Client {
         return lloguers.contains(lloguer);
     }
 
-    public String informeHTML() {
+    public String informe() {
         double total = 0;
         int bonificacions = 0;
         String resultat = "Informe de lloguers del client " +

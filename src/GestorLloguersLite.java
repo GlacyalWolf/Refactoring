@@ -18,12 +18,11 @@ public class GestorLloguersLite {
 
         // demostració de formatat d'una data
         System.out.println(dateFormat.format(lloguerBasic.getData()));
-
-
-
-
+        Client pepe=new Client("123311J","pepe","123321112");
+        System.out.println(pepe.informe());
 
     }
+
     public static void informeLite(Client client){
         System.out.println("Client: "+client.getNom());
         System.out.println("        "+client.getNif());
@@ -39,4 +38,6 @@ public class GestorLloguersLite {
             System.out.println("        "+l.getDies());
         }
     }
+
+
 }
