@@ -39,26 +39,26 @@ public class Lloguer {
         this.vehicle = vehicle;
     }
 
-    public double quantitat(){
-        double quantitat = 0;
+public double preuVheicles(){
+        double preu = 0;
         switch (getVehicle().getCategoria()) {
             case Vehicle.BASIC:
-                quantitat += costUnitariInicialBASIC;
+                preu += costUnitariInicialBASIC;
                 if (getDies() > diesInicialsAmbMateixPreuBASIC) {
-                    quantitat += (getDies() - diesInicialsAmbMateixPreuBASIC) * 1.5;
+                    preu += (getDies() - diesInicialsAmbMateixPreuBASIC) * 1.5;
                 }
                 break;
             case Vehicle.GENERAL:
-                quantitat += costUnitariInicialGENERAL;
+                preu += costUnitariInicialGENERAL;
                 if (getDies() > diesInicialsAmbMateixPreuGENERAL) {
-                    quantitat += (getDies() - diesInicialsAmbMateixPreuGENERAL) * 2.5;
+                    preu += (getDies() - diesInicialsAmbMateixPreuGENERAL) * 2.5;
                 }
                 break;
             case Vehicle.LUXE:
-                quantitat += getDies() * 6;
+                preu += getDies() * 6;
                 break;
         }
-        return quantitat;
+        return preu;
     }
 
     public int bonificacions(){
