@@ -50,21 +50,22 @@ public class Client {
                     " " +
                     lloguer.getVehicle().getModel() + ": " +
                     (lloguer.quantitat() * 30) + "€" + "\n";
-            total += lloguer.quantitat() * 30;
+
         }
 
         // afegeix informació final
-        resultat += "Import a pagar: " + total + "€\n" +
+        resultat += "Import a pagar: " + importTotal() + "€\n" +
                 "Punts guanyats: " + bonificacions + "\n";
         return resultat;
     }
-    public double importTotal(){
-        double total = 0;
-        for (Lloguer lloguer : lloguers) {
-            total += lloguer.quantitat() * 30;
+    private double importTotal(){
+        double imp=0;
+        for (Lloguer lloguer:lloguers) {
+            imp += lloguer.quantitat()*30;
         }
-        return total;
+        return imp;
     }
+
 
 
 }
