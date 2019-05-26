@@ -55,7 +55,7 @@ public class Client {
 
         // afegeix informació final
         resultat += "Import a pagar: " + importTotal() + "€\n" +
-                "Punts guanyats: " + bonificacions + "\n";
+                "Punts guanyats: " + bonificacionsTotals() + "\n";
         return resultat;
     }
     private double importTotal(){
@@ -65,7 +65,12 @@ public class Client {
         }
         return imp;
     }
-
-
+    private int bonificacionsTotals(){
+        int boni=0;
+        for (Lloguer lloguers:lloguers){
+            boni += lloguers.bonificacions();
+        }
+        return boni;
+    }
 
 }
