@@ -5,6 +5,7 @@ public class Client {
     private String nom;
     private String telefon;
     public Vector<Lloguer> lloguers;
+    private static final double EUROS_PER_UNITAT_DE_COST = 30;
 
     public Client(String nif, String nom, String telefon) {
         this.nif = nif;
@@ -37,31 +38,13 @@ public class Client {
     }
 
     public String informe() {
-        double total = 0;
-        int bonificacions = 0;
-        String resultat = "Informe de lloguers del client " +
-                getNom() +
-                " (" + getNif() + ")\n";
-        for (Lloguer lloguer: lloguers) {
-            bonificacions += lloguer.bonificacions();
-            // composa els resultats d'aquest lloguer
-            resultat += "\t" +
-                    lloguer.getVehicle().getMarca() +
-                    " " +
-                    lloguer.getVehicle().getModel() + ": " +
-                    (lloguer.quantitat() * 30) + "€" + "\n";
 
-        }
-
-        // afegeix informació final
-        resultat += "Import a pagar: " + importTotal() + "€\n" +
-                "Punts guanyats: " + bonificacionsTotals() + "\n";
-        return resultat;
+        return composaCapsalera() + composaDetall() + composaPeu();
     }
     private double importTotal(){
         double imp=0;
         for (Lloguer lloguer:lloguers) {
-            imp += lloguer.quantitat()*30;
+            imp += lloguer.quantitat()*EUROS_PER_UNITAT_DE_COST;
         }
         return imp;
     }
@@ -72,5 +55,36 @@ public class Client {
         }
         return boni;
     }
+    private String composaCapsalera(){
+        String resultat = "Informe de lloguers del client " +
+                getNom() +
+                " (" + getNif() + ")\n";
+        return resultat;
+    }
+
+    private String composaDetall(){
+        int bonificacions= 0;
+        String resultat="";
+        for (Lloguer lloguer: lloguers) {
+            bonificacions += lloguer.bonificacions();
+            // composa els resultats d'aquest lloguer
+            resultat = "\t" +
+                    lloguer.getVehicle().getMarca() +
+                    " " +
+                    lloguer.getVehicle().getModel() + ": " +
+                    (lloguer.quantitat() * EUROS_PER_UNITAT_DE_COST) + "€" + "\n";
+
+
+        }
+        return resultat;
+    }
+
+    private String composaPeu(){
+        String resultat = "Import a pagar: " + importTotal() + "€\n" +
+                "Punts guanyats: " + bonificacionsTotals() + "\n";
+        return resultat;
+    }
+
+
 
 }
