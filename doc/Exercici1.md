@@ -60,8 +60,10 @@ El problema del codi i perque li vaig fer un refarctoring es que en els moduls p
 ![DiagramaUML](media/UMLex9.png)
 
 ***
+# Exercici 14. Diagrama de classes actualitzat
+![DiagramaUML](media/UMLex14.png)
 
-
+***
 
 
 

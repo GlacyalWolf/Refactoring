@@ -58,6 +58,13 @@ public class Client {
                 "Punts guanyats: " + bonificacions + "\n";
         return resultat;
     }
+    public double importTotal(){
+        double total = 0;
+        for (Lloguer lloguer : lloguers) {
+            total += lloguer.quantitat() * 30;
+        }
+        return total;
+    }
 
 
 }
