@@ -43,7 +43,7 @@ public class Client {
                 getNom() +
                 " (" + getNif() + ")\n";
         for (Lloguer lloguer: lloguers) {
-            bonificacions += bonificacionsDeLloguer(lloguer);
+            bonificacions += lloguer.bonificacions();
             // composa els resultats d'aquest lloguer
             resultat += "\t" +
                     lloguer.getVehicle().getMarca() +
@@ -58,15 +58,6 @@ public class Client {
                 "Punts guanyats: " + bonificacions + "\n";
         return resultat;
     }
-    private int bonificacionsDeLloguer(Lloguer lloguer){
-        int boni=0;
-        if (lloguer.vehicle.getCategoria()==1){
-            boni=1;
-        }
-        else if (lloguer.vehicle.getCategoria()==2){
-            boni=2;
-        }
-        return boni;
-    }
+
 
 }

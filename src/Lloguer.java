@@ -56,5 +56,16 @@ public class Lloguer {
         }
         return quantitat;
     }
+    public int bonificacions(){
+        int boni=0;
+        if (vehicle.getCategoria()==1){
+            boni=1;
+        }
+        else if (vehicle.getCategoria()==2){
+            boni=2;
+        }
+        return boni;
+    }
+
 
 }
