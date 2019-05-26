@@ -84,6 +84,24 @@ public class Client {
                 "Punts guanyats: " + bonificacionsTotals() + "\n";
         return resultat;
     }
+    private String informeHTML(){
+        System.out.println("<h1>Informe de lloguers</h1>");
+        System.out.println("<p>Informe de lloguers del client <em>"+getNom()+"</em> (<strong>"+getNif()+"</strong>)</p>");
+        System.out.println("<table>");
+        int bonificacions= 0;
+        String resultat="";
+        for (Lloguer lloguer: lloguers) {
+            bonificacions += lloguer.bonificacions();
+            // composa els resultats d'aquest lloguer
+            resultat = "\t" +
+                    lloguer.getVehicle().getMarca() +
+                    " " +
+                    lloguer.getVehicle().getModel() + ": " +
+                    (lloguer.preuVheicles() * EUROS_PER_UNITAT_DE_COST) + "€" + "\n";
+
+
+
+        }
 
 
 

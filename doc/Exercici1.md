@@ -1,4 +1,28 @@
-# Exercici 1. El meu exemple
+# Index
+1. [Exercici 1. El meu exemple](#id1)
+
+2. [Exercici 9: Canvis en el diagrama de classe](#id2)
+
+3. [Exercici 14. Diagrama de classes actualitzat](#id3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***
+# Exercici 1. El meu exemple<a name="id1"/>
 
 Descriu un exemple de canvi de codi teu que es pugui considerar refacció i un altre que no. Pots fer servir codi de qualsevol dels teus exercicis del cicle (especifica la procedència). No oblidis descriure el perquè de la teva classificació basant-te en els conceptes d’aquesta secció.
 
@@ -56,11 +80,11 @@ El problema del codi i perque li vaig fer un refarctoring es que en els moduls p
 
 ***
 
-# Exercici 9: Canvis en el diagrama de classe
+# Exercici 9: Canvis en el diagrama de classe<a name="id2"/>
 ![DiagramaUML](media/UMLex9.png)
 
 ***
-# Exercici 14. Diagrama de classes actualitzat
+# Exercici 14. Diagrama de classes actualitzat<a name="id3"/>
 ![DiagramaUML](media/UMLex14.png)
 
 ***

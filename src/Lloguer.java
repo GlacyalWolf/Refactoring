@@ -68,4 +68,5 @@ public double preuVheicles(){
             return 1;
         }
     }
+
 }
