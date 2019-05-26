@@ -69,3 +69,4 @@ El problema del codi i perque li vaig fer un refarctoring es que en els moduls p
 
 
 
+
