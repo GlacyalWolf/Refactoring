@@ -1,5 +1,4 @@
 # Exercici 1. El meu exemple
-_________________________________________________________________
 
 Descriu un exemple de canvi de codi teu que es pugui considerar refacció i un altre que no. Pots fer servir codi de qualsevol dels teus exercicis del cicle (especifica la procedència). No oblidis descriure el perquè de la teva classificació basant-te en els conceptes d’aquesta secció.
 
@@ -55,7 +54,14 @@ Aquest codi esta extret de un exercici de la classe de programació.
 
 El problema del codi i perque li vaig fer un refarctoring es que en els moduls per fer les operacions els operadors es diuen **X** i **Y** i els vaig canviar per **num1** i **num2**.
 
-* * *
+***
+
+# Exercici 9: Canvis en el diagrama de classe
+![DiagramaUML](media/UMLex9.png)
+
+***
+
+
 
 
 
